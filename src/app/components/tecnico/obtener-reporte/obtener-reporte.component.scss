@@ -1,0 +1,27 @@
+mat-form-field {
+  width: 100%;
+}
+mat-card {
+ margin: 80px;
+ font-family: 'Amaranth', sans-serif;
+}
+mat-card-title {
+  margin-bottom: 45px;
+}
+mat-card-title,
+mat-card-content {
+  display: flex;
+  justify-content: center;
+}
+
+mat-card-actions {
+  margin: 10px;
+}
+
+mat-card-actions{
+  text-align: center;
+}
+table {
+  width: 92%;
+  margin: 60px;
+}

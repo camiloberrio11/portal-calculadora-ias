@@ -1,0 +1,61 @@
+<ngx-loading [show]="loading"></ngx-loading>
+<mat-card class="animate__animated animate__bounceInDown">
+  <mat-card-title>Hola! Registra acá tu reporte</mat-card-title>
+  <mat-card-content>
+    <form class="example-container" [formGroup]="formReporte" (ngSubmit)="registrarReporte()">
+      <mat-form-field>
+        <input type="text" matInput placeholder="Ingresa tu identifiación" formControlName="identificacionTecnico"
+        required>
+        <mat-error *ngIf="f.identificacionTecnico.errors && (f.identificacionTecnico.dirty || f.identificacionTecnico.touched)">Debes ingresar tu identificación</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input type="text" matInput placeholder="Ingresa identifiacióndel servicio" formControlName="identificacionServicio"
+        required>
+        <mat-error *ngIf="f.identificacionServicio.errors && (f.identificacionServicio.dirty || f.identificacionServicio.touched)">Debes ingresar tu identificación del servicio</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <label>Fecha de inicio</label>
+        <input type="date" matInput formControlName="fechaInicio" required>
+        <mat-error *ngIf="f.fechaInicio.errors && (f.fechaInicio.dirty || f.fechaInicio.touched)">Debes ingresar fecha de inicio</mat-error>
+      </mat-form-field>
+
+      <div class="example-container ejemplo">
+        <mat-form-field class="ejemplo">
+          <input matInput type="text" placeholder="Hora de inicio / Formato 24hrs" formControlName="horaInicio">
+          <mat-error *ngIf="f.horaInicio.errors && (f.horaInicio.dirty || f.horaInicio.touched)">Debes ingresar hora de inicio formato 24 hrs</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="ejemplo">
+          <input matInput type="text" placeholder="Minutos de inicio / Formato 24hrs" formControlName="minutosInicio" >
+          <mat-error *ngIf="f.minutosInicio.errors && (f.minutosInicio.dirty || f.minutosInicio.touched)">Debes ingresar minutos de inicio formato 24 hrs</mat-error>
+        </mat-form-field>
+      </div>
+
+      <mat-form-field>
+        <label>Fecha de fin</label>
+        <input type="date" matInput formControlName="fechaFin"required>
+        <mat-error *ngIf="f.fechaFin.errors && (f.fechaFin.dirty || f.fechaFin.touched)">Debes ingresar fecha de fin</mat-error>
+      </mat-form-field>
+
+      <div class="example-container ejemplo">
+        <mat-form-field class="ejemplo">
+          <input matInput type="text" placeholder="Hora de inicio / Formato 24hrs" formControlName="horaFin">
+          <mat-error *ngIf="f.horaFin.errors && (f.horaFin.dirty || f.horaFin.touched)">Debes ingresar hora de fin formato 24 hrs</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="ejemplo">
+          <input matInput type="text" placeholder="Minutos de inicio / Formato 24hrs" formControlName="minutosFin">
+          <mat-error *ngIf="f.minutosFin.errors && (f.minutosFin.dirty || f.minutosFin.touched)">Debes ingresar minutos de fin formato 24 hrs</mat-error>
+        </mat-form-field>
+      </div>
+
+
+    </form>
+  </mat-card-content>
+  <mat-card-actions>
+    <button [disabled]="formReporte.invalid" mat-raised-button color="primary" (click)="registrarReporte()">Guardar</button>
+    <button  mat-raised-button color="accent" [routerLink]="['/home']">Volver</button>
+  </mat-card-actions>
+</mat-card>

@@ -1,0 +1,18 @@
+<ngx-loading [show]="loading"></ngx-loading>
+  <div class="wrap">
+    <mat-card>
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title >IAS HandyMan</mat-card-title>
+        <mat-card-subtitle>IAS Sofware Colombia</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>En este portal podrás registrar todas tus visitas de clientes, además podrás consultar todas las horas registradas de trabajo por numero de semana!
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+          <button class="animate__animated animate__backInLeft" [routerLink]="['/tecnico/registroreporte']" mat-raised-button color="primary">Quiero registrar reporte</button>
+          <button class="animate__animated animate__backInRight" [routerLink]="['/tecnico/reporte']" mat-raised-button color="accent">Consultar mi reporte</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>

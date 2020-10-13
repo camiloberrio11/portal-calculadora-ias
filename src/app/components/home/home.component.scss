@@ -1,0 +1,20 @@
+.wrap {
+  margin: 50px;
+}
+mat-card{
+  align-items: center;
+  text-align: center;
+}
+
+mat-card-header{
+  justify-content: center;
+}
+
+mat-card-title {
+  font-family: 'Graduate', cursive;
+  text-decoration: underline;
+}
+.mat-card-header .mat-card-title {
+  font-size: 30px;
+  margin-bottom: 25px;
+}
