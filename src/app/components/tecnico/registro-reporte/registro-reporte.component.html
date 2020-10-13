@@ -41,16 +41,15 @@
 
       <div class="example-container ejemplo">
         <mat-form-field class="ejemplo">
-          <input matInput type="text" placeholder="Hora de inicio / Formato 24hrs" formControlName="horaFin">
+          <input matInput type="text" placeholder="Hora de fin servicio / Formato 24hrs" formControlName="horaFin">
           <mat-error *ngIf="f.horaFin.errors && (f.horaFin.dirty || f.horaFin.touched)">Debes ingresar hora de fin formato 24 hrs</mat-error>
         </mat-form-field>
 
         <mat-form-field class="ejemplo">
-          <input matInput type="text" placeholder="Minutos de inicio / Formato 24hrs" formControlName="minutosFin">
+          <input matInput type="text" placeholder="Minutos de fin servicio / Formato 24hrs" formControlName="minutosFin">
           <mat-error *ngIf="f.minutosFin.errors && (f.minutosFin.dirty || f.minutosFin.touched)">Debes ingresar minutos de fin formato 24 hrs</mat-error>
         </mat-form-field>
       </div>
-
 
     </form>
   </mat-card-content>

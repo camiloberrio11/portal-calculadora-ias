@@ -14,7 +14,7 @@ export class ObtenerReporteComponent implements OnInit {
   identificacionTecnico: string;
   numSemana: string;
   listadoReporte: any[] = [];
-  displayedColumns: string[] = ['idservicio', 'numerosemana', 'idtecnico', 'horasnormales', 'horasnocturas', 'horasdominicales', 'horasnormalesextras', 'horasnocturnasextras', 'horasdominicalesextras'];
+  displayedColumns: string[] = [ 'numerosemana', 'idtecnico', 'horasnormales', 'horasnocturas', 'horasdominicales', 'horasnormalesextras', 'horasnocturnasextras', 'horasdominicalesextras'];
   @ViewChild('formreporte') form: FormControl;
 
   constructor(
